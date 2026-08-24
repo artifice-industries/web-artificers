@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ lang | default(value="en") }}">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {# Resolve title/description from whichever context is active (page or section). #}
+    {% set_global page_title = config.title %}
+    {% set_global page_desc = config.description %}
+    {% if page %}
+      {% set_global page_title = page.title ~ " — " ~ config.title %}
+      {% if page.description %}{% set_global page_desc = page.description %}{% endif %}
+    {% elif section %}
+      {% set_global page_title = section.title %}
+      {% if section.description %}{% set_global page_desc = section.description %}{% endif %}
+    {% endif %}
+    <title>{{ page_title }}</title>
+    <meta name="description" content="{{ page_desc }}" />
+    <meta name="author" content="{{ config.extra.owner }}" />
+
+    {# Open Graph / Twitter #}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ config.title }}" />
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:description" content="{{ page_desc }}" />
+    <meta property="og:url" content="{{ current_url | default(value=config.base_url) | safe }}" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ get_url(path='main.css') | safe }}" />
+  </head>
+  <body>
+    {% block header %}{% include "partials/header.html" %}{% endblock header %}
+    {% block content %}{% endblock content %}
+    {% include "partials/footer.html" %}
+  </body>
+</html>

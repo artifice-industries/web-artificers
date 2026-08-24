@@ -1,0 +1,62 @@
+# Single source of truth for the Projects grid on the home page.
+# Loaded in templates via load_data(path="data/projects.toml").
+# Order = display order in the grid. `kind` renders as the card's badge;
+# `url` is optional — cards without one render as plain text.
+
+[[projects]]
+name    = "Stamp"
+kind    = "macOS"
+summary = "Production analytics for live events - Record, take notes, gain insights and turn your ideas into world class productions."
+icon    = "/img/Stamp-256x256.png"
+url     = "https://stamp.xyz"
+
+[[projects]]
+name    = "StampKit"
+kind    = "Framework"
+summary = "The StampKit package provides the classes needed for your apps to communicate with Stamp."
+icon    = "/img/stampkit-icon.svg"
+
+[[projects]]
+name    = "OSCKit"
+kind    = "Framework"
+summary = "A Swift framework for sending, receiving, and parsing OSC messages & bundles."
+icon    = "/img/osckit-icon.svg"
+url     = "https://github.com/sammysmallman/OSCKit"
+
+[[projects]]
+name    = "Playback for Eos"
+kind    = "iOS"
+summary = "Playback for Eos combines seamless connectivity with elegant simplicity, allowing you to keep track of your production. With a native iOS app connected to an ETC Eos® Family console, you can control, view, and note the playback status."
+icon    = "/img/Playback-256x256.png"
+url     = "https://apps.apple.com/us/app/playback-for-eos/id6742647587"
+
+[[projects]]
+name    = "Eos Tracker"
+kind    = "macOS"
+summary = "Basic synchronisation between two ETC Eos family consoles running differing show files, version of software or even languages."
+icon    = "/img/Eos-Tracker-256x256.png"
+
+[[projects]]
+name    = "EosKit"
+kind    = "Framework"
+summary = "The EosKit package provides the classes needed for your apps to communicate with an ETC Eos family console."
+icon    = "/img/eoskit-icon.svg"
+
+[[projects]]
+name    = "OSCsmith"
+kind    = "macOS"
+summary = "A lightweight utility application for testing, monitoring and logging OSC packets. Originally built to test OSCKit, OSCsmith is designed to handle quickly setting up multiple UDP and TCP configurations and communicating with devices via a chat like \"OSC annotation\" system."
+icon    = "/img/OSCsmith-256x256.png"
+url     = "https://apps.apple.com/us/app/oscsmith/id1582837698"
+
+[[projects]]
+name    = "Mouse Tools"
+kind    = "macOS"
+summary = "Mouse Tools allows you to centre your mouse, or position it to a user definable location with keyboard shortcuts."
+icon    = "/img/Mouse-Tools-256x256.png"
+
+[[projects]]
+name    = "Jarveos"
+kind    = "macOS"
+summary = "Eos voice control - A proof of concept application to enable control of an ETC Eos family console where ever you are in the venue... with your voice!"
+icon    = "/img/Jarveos-256x256.png"

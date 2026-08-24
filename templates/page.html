@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block header %}
+  {% set crumb = page.extra.crumb | default(value=page.title) %}
+  {% include "partials/header.html" %}
+{% endblock header %}
+
+{% block content %}
+<main class="page">
+  <h1 class="page__title">{{ page.title }}</h1>
+  <div class="prose">
+    {{ page.content | safe }}
+  </div>
+</main>
+{% endblock content %}

@@ -1,0 +1,12 @@
+{# Site header: the wordmark on the charcoal band, with an optional breadcrumb
+   for inner pages (set via the `crumb` variable before including). The home
+   page includes this inside its charcoal hero; inner pages get the band from
+   the header itself. #}
+<header class="site-header{% if crumb %} site-header--page{% endif %}">
+  <nav class="site-nav">
+    <a href="/" aria-label="Home" class="site-nav__home">
+      {% include "partials/wordmark.html" %}
+    </a>
+    {% if crumb %}<span class="site-nav__crumb">{{ crumb }}</span>{% endif %}
+  </nav>
+</header>

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block header %}{% endblock header %}
+
+{% block content %}
+{% set data = load_data(path="data/projects.toml") %}
+<main>
+  {# Hero: charcoal band carrying the header, strapline and illustration. #}
+  <div class="hero">
+    {% include "partials/header.html" %}
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <a href="https://stamp.xyz" class="hero__pill">
+          <span class="hero__pill-badge">What's New</span>
+          <span class="hero__pill-text">Stamp version 2.4.3</span>
+          <svg class="hero__pill-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </a>
+        <h1 class="hero__title">
+          <span>We are artificers</span>
+          <span class="hero__title-accent">A creative technology studio</span>
+        </h1>
+        <p class="hero__lede">Striving to create well designed and solidly engineered applications.</p>
+      </div>
+      <div class="hero__art">
+        <img src="{{ get_url(path='img/artificers.svg') | safe }}" alt="" />
+      </div>
+    </div>
+  </div>
+
+  {# Projects grid, driven by data/projects.toml. #}
+  <section class="projects">
+    <div class="projects__intro">
+      <h2 class="projects__kicker">Discover</h2>
+      <p class="projects__title">Projects</p>
+      <p class="projects__lede">Innovative solutions for the live event industry</p>
+    </div>
+    <div class="projects__grid">
+      {% for project in data.projects %}
+      <article class="project-card">
+        <div class="project-card__icon">
+          <img src="{{ get_url(path=project.icon) | safe }}" alt="" />
+        </div>
+        <div class="project-card__body">
+          <span class="project-card__kind">{{ project.kind }}</span>
+          {% if project.url %}
+          <a href="{{ project.url }}" class="project-card__text">
+            <h3 class="project-card__name">{{ project.name }}</h3>
+            <p class="project-card__summary">{{ project.summary }}</p>
+          </a>
+          {% else %}
+          <div class="project-card__text">
+            <h3 class="project-card__name">{{ project.name }}</h3>
+            <p class="project-card__summary">{{ project.summary }}</p>
+          </div>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</main>
+{% endblock content %}

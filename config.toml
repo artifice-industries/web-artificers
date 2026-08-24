@@ -1,0 +1,26 @@
+# Artificers — official website (artificers.co.uk)
+# Built with Zola. Static replacement for the retired Laravel `artificers-site`
+# repo; deployed to GitHub Pages from .github/workflows/deploy.yml.
+
+base_url = "https://artificers.co.uk"
+title = "Artificers"
+description = "Artificers is a creative technology studio striving to create well designed and solidly engineered applications."
+
+default_language = "en"
+compile_sass = true
+build_search_index = false
+generate_feeds = false
+minify_html = true
+
+# Zola generates sitemap.xml automatically from the content tree.
+
+[markdown]
+smart_punctuation = true
+
+[extra]
+# Site-wide values available to every template as config.extra.*
+owner = "Sam Smallman"
+company = "Artifice Industries Ltd"
+support_email = "support@artificers.co.uk"
+github_url = "https://github.com/artifice-industries"
+twitter_url = "https://twitter.com/ArtificeInd"
