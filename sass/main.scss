@@ -112,6 +112,7 @@ a {
 
 .site-nav__crumb {
   font-size: 1.5rem;
+  line-height: 2rem;
   letter-spacing: 0.025em;
   color: var(--green);
 
@@ -196,6 +197,7 @@ a {
 .hero__pill-text {
   margin-left: 1rem;
   font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .hero__pill-chevron {
@@ -211,7 +213,7 @@ a {
   font-size: 2.25rem;
   font-weight: 800;
   letter-spacing: -0.025em;
-  line-height: 1.1;
+  line-height: 2.5rem;
 
   span {
     display: block;
@@ -220,6 +222,7 @@ a {
   @media (min-width: 640px) {
     margin-top: 1.25rem;
     font-size: 3.75rem;
+    line-height: 1;
   }
   @media (min-width: 1024px) {
     margin-top: 1.5rem;
@@ -234,10 +237,12 @@ a {
   margin: 0.75rem 0 0;
   color: var(--on-dark-soft);
   font-size: 1rem;
+  line-height: 1.5rem;
 
   @media (min-width: 640px) {
     margin-top: 1.25rem;
     font-size: 1.25rem;
+    line-height: 1.75rem;
   }
   @media (min-width: 1024px) {
     font-size: 1.125rem;
@@ -303,6 +308,7 @@ a {
   color: var(--kicker);
   font-size: 1rem;
   font-weight: 600;
+  line-height: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -313,9 +319,11 @@ a {
   font-size: 1.875rem;
   font-weight: 800;
   letter-spacing: -0.025em;
+  line-height: 2.25rem;
 
   @media (min-width: 640px) {
     font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -324,6 +332,7 @@ a {
   max-width: 65ch;
   color: var(--ink-soft);
   font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .projects__grid {
@@ -392,12 +401,14 @@ a {
   color: var(--ink);
   font-size: 1.25rem;
   font-weight: 600;
+  line-height: 1.75rem;
 }
 
 .project-card__summary {
   margin: 0.75rem 0 0;
   color: var(--ink-soft);
   font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 // ---------------------------------------------------------------- page
@@ -420,13 +431,15 @@ a {
   font-size: 1.875rem;
   font-weight: 800;
   letter-spacing: -0.025em;
-  line-height: 1.25;
+  line-height: 2.25rem;
 
   @media (min-width: 640px) {
     font-size: 2.25rem;
+    line-height: 2.5rem;
   }
   @media (min-width: 768px) {
     font-size: 3.75rem;
+    line-height: 3.5rem;
   }
 }
 
@@ -529,6 +542,7 @@ a {
     padding: 0.5rem 0.5rem 0 0;
     color: var(--ink-soft);
     font-size: 0.75rem;
+    line-height: 1rem;
   }
 }
 
