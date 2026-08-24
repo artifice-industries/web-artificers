@@ -1,6 +1,6 @@
 +++
 title = "Artificers"
-description = "Artificers is a creative technology studio striving to create well designed and solidly engineered applications."
+description = "Artificers is a creative technology studio crafting honest apps that tell stories."
 template = "index.html"
 aliases = ["/playback", "/swift-eos-kit"]
 +++

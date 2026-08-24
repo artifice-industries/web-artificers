@@ -4,7 +4,7 @@
 
 base_url = "https://artificers.co.uk"
 title = "Artificers"
-description = "Artificers is a creative technology studio striving to create well designed and solidly engineered applications."
+description = "Artificers is a creative technology studio crafting honest apps that tell stories."
 
 default_language = "en"
 compile_sass = true
